@@ -1,0 +1,56 @@
+{
+    "name": "huoxin/auto-follow-discussion",
+    "description": "Allow users to automatically follow the discussions they created",
+    "keywords": [
+        "discussion"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2.0",
+        "flarum/subscriptions": "*"
+    },
+    "authors": [
+        {
+            "name": "huoxin",
+            "email": "23447157+huoxin233@users.noreply.github.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Huoxin\\AutoFollowDiscussion\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Auto Follow Discussion",
+            "category": "",
+            "icon": {
+                "name": "fas fa-check",
+                "color": "#de8e00",
+                "backgroundColor": "#ffea7b"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": false,
+                "css": false,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
