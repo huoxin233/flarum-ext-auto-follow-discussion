@@ -4,11 +4,19 @@
 
 A [Flarum](http://flarum.org) extension that builds on [Flarum Subscriptions](https://github.com/flarum/subscriptions).
 
-Allow users to automatically follow the discussions they created.
-
 一个 [Flarum](http://flarum.org) 扩展，基于 [Flarum Subscriptions](https://github.com/flarum/subscriptions)。
 
-允许用户自动关注他们创建的主题。
+
+## Features
+
+ - Allow users to automatically follow the discussions they created（允许用户自动关注他们创建的主题）
+
+
+## Screenshots
+
+<img src="https://github.com/huoxin233/flarum-ext-auto-follow-discussion/assets/23447157/d1fbf7f3-ce53-477f-98ed-bec9a0c57d52" width="800">
+
+<img src="https://github.com/huoxin233/flarum-ext-auto-follow-discussion/assets/23447157/58c0e73d-19e2-4379-8b77-3b7047a67b02" width="800">
 
 ## Installation
 
@@ -30,4 +38,4 @@ php flarum cache:clear
 
 - [Packagist](https://packagist.org/packages/huoxin/auto-follow-discussion)
 - [GitHub](https://github.com/huoxin/auto-follow-discussion)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [Discuss](https://discuss.flarum.org/d/34680)
