@@ -13,6 +13,7 @@ namespace Huoxin\AutoFollowDiscussion;
 
 use Flarum\Extend;
 use Flarum\Discussion\Event\Started;
+use Flarum\Discussion\Event\UserRead;
 
 return [
     (new Extend\Frontend('forum'))
@@ -24,11 +25,14 @@ return [
     new Extend\Locales(__DIR__.'/locale'),
 
     (new Extend\Settings())
-        ->default('huoxin-auto-follow-discussion.defaultFollowAfterCreate', true),
+        ->default('huoxin-auto-follow-discussion.defaultFollowAfterCreate', true)
+        ->default('huoxin-auto-follow-discussion.defaultFollowAfterRead', false),
 
     (new Extend\Event())
-        ->listen(Started::class, FollowAfterCreate::class),
+        ->listen(Started::class, FollowAfterCreate::class)
+        ->listen(UserRead::class, FollowAfterRead::class),
     
     (new Extend\User())
-        ->registerPreference('followAfterCreate', 'boolval', (bool) resolve('flarum.settings')->get('huoxin-auto-follow-discussion.defaultFollowAfterCreate', true)),
+        ->registerPreference('followAfterCreate', 'boolval', (bool) resolve('flarum.settings')->get('huoxin-auto-follow-discussion.defaultFollowAfterCreate', true))
+        ->registerPreference('followAfterRead', 'boolval', (bool) resolve('flarum.settings')->get('huoxin-auto-follow-discussion.defaultFollowAfterRead', false)),
 ];

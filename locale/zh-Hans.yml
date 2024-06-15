@@ -4,6 +4,9 @@ huoxin-auto-follow-discussion:
   admin:
     default-follow-after-create-label: 自动关注我创建的主题的默认值
     default-follow-after-create-help: 默认为：开启
+    default-follow-after-read-label: 自动关注我读过的主题的默认值
+    default-follow-after-read-help: 默认为：关闭
 
   forum:
     default-follow-after-create-label: 自动关注我创建的主题
+    default-follow-after-read-label: 自动关注我读过的主题

@@ -24,5 +24,24 @@ app.initializers.add('huoxin/auto-follow-discussion', () => {
       ),
       8
     );
+    items.add(
+      'followAfterRead',
+      Switch.component(
+        {
+          className: 'followAfterRead',
+          state: this.user.preferences().followAfterRead,
+          onchange: (value) => {
+            this.followAfterReadLoading = true;
+            this.user?.savePreferences({ followAfterRead: value }).then(() => {
+              this.followAfterReadLoading = false;
+              m.redraw();
+            });
+          },
+          loading: this.followAfterReadLoading,
+        },
+        app.translator.trans('huoxin-auto-follow-discussion.forum.default-follow-after-read-label')
+      ),
+      9
+    );
   });
 });
