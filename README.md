@@ -6,11 +6,15 @@ A [Flarum](http://flarum.org) extension that builds on [Flarum Subscriptions](ht
 
 一个 [Flarum](http://flarum.org) 扩展，基于 [Flarum Subscriptions](https://github.com/flarum/subscriptions)。
 
-
 ## Features
 
- - Allow users to automatically follow the discussions they created（允许用户自动关注他们创建的主题）
+- Allow users to automatically follow the discussions they created（允许用户自动关注他们创建的主题）
 
+- Allow users to automatically follow the discussions they read（允许用户自动关注他们读过的主题）
+
+## Known Issues
+
+- For automatically follow after read, the following state is not shown unless the page is refresh （当使用自动关注读过的主题时，需要刷新页面才会显示关注状态）
 
 ## Screenshots
 
@@ -37,5 +41,5 @@ php flarum cache:clear
 ## Links
 
 - [Packagist](https://packagist.org/packages/huoxin/auto-follow-discussion)
-- [GitHub](https://github.com/huoxin/auto-follow-discussion)
+- [GitHub](https://github.com/huoxin233/flarum-ext-auto-follow-discussion)
 - [Discuss](https://discuss.flarum.org/d/34680)
