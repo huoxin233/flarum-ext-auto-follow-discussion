@@ -2,6 +2,7 @@ import app from 'flarum/forum/app';
 import { extend } from 'flarum/common/extend';
 import SettingsPage from 'flarum/forum/components/SettingsPage';
 import Switch from 'flarum/common/components/Switch';
+import Discussion from 'flarum/common/models/Discussion';
 
 app.initializers.add('huoxin/auto-follow-discussion', () => {
   extend(SettingsPage.prototype, 'notificationsItems', function (items) {
@@ -43,5 +44,11 @@ app.initializers.add('huoxin/auto-follow-discussion', () => {
       ),
       8
     );
+  });
+
+  extend(Discussion.prototype, 'save', function (promise, attributes) {
+    if (promise && attributes && attributes.lastReadPostNumber) {
+      promise.then(() => m.redraw());
+    }
   });
 });
