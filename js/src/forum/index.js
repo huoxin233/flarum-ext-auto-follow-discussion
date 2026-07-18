@@ -1,11 +1,10 @@
 import app from 'flarum/forum/app';
 import { extend } from 'flarum/common/extend';
-import SettingsPage from 'flarum/forum/components/SettingsPage';
 import Switch from 'flarum/common/components/Switch';
 import Discussion from 'flarum/common/models/Discussion';
 
 app.initializers.add('huoxin/auto-follow-discussion', () => {
-  extend(SettingsPage.prototype, 'notificationsItems', function (items) {
+  extend('flarum/forum/components/SettingsPage', 'notificationsItems', function (items) {
     items.add(
       'followAfterRead',
       Switch.component(
