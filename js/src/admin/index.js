@@ -1,7 +1,7 @@
 import app from 'flarum/admin/app';
 
 app.initializers.add('huoxin/auto-follow-discussion', () => {
-  app.extensionData
+  app.registry
     .for('huoxin-auto-follow-discussion')
     .registerSetting({
       setting: 'huoxin-auto-follow-discussion.defaultFollowAfterCreate',
