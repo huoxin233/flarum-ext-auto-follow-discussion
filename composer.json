@@ -1,6 +1,6 @@
 {
     "name": "huoxin/auto-follow-discussion",
-    "description": "Allow users to automatically follow the discussions they created",
+    "description": "Add more options for allowing users to automatically follow the discussions",
     "keywords": [
         "discussion"
     ],
@@ -17,6 +17,21 @@
             "role": "Developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/huoxin233/flarum-ext-auto-follow-discussion/issues",
+        "source": "https://github.com/huoxin233/flarum-ext-auto-follow-discussion",
+        "forum": "https://discuss.flarum.org/d/34680"
+    },
+    "funding": [
+        {
+            "type": "buymeacoffee",
+            "url": "https://www.buymeacoffee.com/huoxin"
+        },
+        {
+            "type": "ko-fi",
+            "url": "https://ko-fi.com/huoxin"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Huoxin\\AutoFollowDiscussion\\": "src/"
@@ -25,12 +40,18 @@
     "extra": {
         "flarum-extension": {
             "title": "Auto Follow Discussion",
-            "category": "",
+            "category": "feature",
             "icon": {
                 "name": "fas fa-check",
-                "color": "#de8e00",
-                "backgroundColor": "#ffea7b"
-            }
+                "color": "#fff",
+                "backgroundColor": "#9A2424"
+            },
+            "database-support": [
+                "mysql",
+                "mariadb",
+                "pgsql",
+                "sqlite"
+            ]
         },
         "flarum-cli": {
             "modules": {
