@@ -26,25 +26,6 @@ app.initializers.add('huoxin/auto-follow-discussion', () => {
       </Switch>,
       9
     );
-
-    items.add(
-      'followAfterCreate',
-      <Switch
-        className="followAfterCreate"
-        state={this.user?.preferences()?.followAfterCreate}
-        onchange={(value: boolean) => {
-          this.followOnCreateLoading = true;
-          this.user?.savePreferences({ followAfterCreate: value }).then(() => {
-            this.followOnCreateLoading = false;
-            m.redraw();
-          });
-        }}
-        loading={this.followOnCreateLoading}
-      >
-        {app.translator.trans('huoxin-auto-follow-discussion.forum.default-follow-after-create-label')}
-      </Switch>,
-      8
-    );
   });
 
   extend('flarum/common/models/Discussion', 'save', function (this: Discussion, promise: Promise<any> | undefined, attributes: any) {
